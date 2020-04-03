@@ -1,0 +1,17 @@
+.bookings{
+    display: grid;
+    grid-template-rows: [heroStart] 50vh [heroEnd] 2rem [row-start] 1fr [row-end] 2rem;
+    grid-template-columns:[full-start] minmax(1rem, 1fr) repeat(10, [col-start] 10rem [col-end]) minmax(1rem, 1fr) [full-end];
+
+        &__hero{
+            background-image: linear-gradient(90deg, rgba($black, 0.4), rgba($black, 0.4)), url("../../img/bookings-hero.jpg");
+        }
+}
+
+.section-booking-form{
+    grid-row: row-start / row-end;
+    grid-column: col-start 1 / col-end 10;
+    background-color: $color-tertiary-light;
+    padding: 5rem 10rem;
+    border-radius: .3rem;
+}

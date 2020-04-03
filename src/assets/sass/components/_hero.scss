@@ -1,0 +1,36 @@
+.hero{
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10rem;
+    grid-column: full-start / full-end;
+
+        @media only screen and (max-width: $bp-large){
+            padding-top: 10rem;
+        }
+
+        @media only screen and (max-width: $bp-small){
+            padding-top: 20rem;
+        }
+
+        @media only screen and (max-width: $bp-tiny){
+            padding-top: 7rem;
+        }
+
+        @media only screen and (max-height: $bp-small){
+            padding: 0;
+        }
+
+        &__container{
+            max-width: $max-width;
+            color: $white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 60%;
+        }
+}

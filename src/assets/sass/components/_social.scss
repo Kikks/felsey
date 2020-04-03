@@ -1,0 +1,30 @@
+.social{
+    &__box:link,
+    &__box:visited{
+        text-decoration: none;
+        height: 5rem;
+        width: 5rem;
+        padding: 1rem;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        transition: all .2s ease-in-out;
+
+            &:hover .social__logo{
+                fill: $color-secondary;
+                transform: scale(1.5) rotate(-10deg);
+            }
+
+            @media only screen and (max-width: $bp-medium){
+                height: 6rem;
+                width: 6rem;
+            }
+    } 
+
+    &__logo{
+        height: 100%;
+        width: 100%;
+        fill: $white;
+        transition: all .2s ease-in-out;
+    }
+}

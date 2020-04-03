@@ -1,0 +1,72 @@
+.footer{
+    background-image: linear-gradient(to top, rgba($black, 0.7), rgba($black,0.7)), url(../../img/chicken.jpg);
+    background-size: cover;
+    background-color: rgba(0,0,0,0.7);
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    
+
+        &__wrapper{
+            max-width: $max-width;
+            display: grid;
+            gap: 5rem;
+            grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+            padding: 5rem 10rem;
+            align-items: center;
+            justify-items: center;
+            justify-content: center;
+            color: $white;
+                @media only screen and (max-width: $bp-medium){
+                    grid-template-columns: 1fr;
+                    grid-template-rows: repeat(2, min-content);
+                    gap: 3rem;
+                    padding: 3rem 10rem;
+                }
+        }
+
+        &__logo{
+            width: 40%;
+            
+
+                &-img{
+                    width: 100%;
+                    margin: 0 auto;
+                }
+
+                &-link{
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    border-bottom: solid .1rem $grey2;
+                    padding: 2rem 0;
+                    outline: none;
+                    cursor: pointer;
+                }
+        }
+
+        &__copyright{
+            font-size: 1.7rem;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        &__content{
+            display: grid;
+            gap: 2rem;
+            width: 100%;
+        }
+
+        &__social{
+            width: 80%;
+            display: flex;
+            justify-content: space-around;
+            align-content: center;
+            padding: 2rem;
+
+                @media only screen and (max-width: $bp-medium){
+                    border-bottom: solid .1rem $grey2;
+                    width: 100%;
+                }
+        }
+}

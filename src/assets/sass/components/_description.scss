@@ -1,0 +1,26 @@
+.description{
+    max-width: $max-width;
+    padding: 20rem 10rem 10rem 10rem;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    gap: 7rem;
+
+        &__heading{
+            color: $color-primary;
+        }
+
+        &__paragraph{
+            width: 90%;
+            text-align: center;
+            line-height: 2;
+        }
+
+        &__link:link,
+        &__link:visited{
+            padding: 1.5rem 2rem;
+            border: solid .1rem $color-primary;
+            text-decoration: none;
+        }
+
+}

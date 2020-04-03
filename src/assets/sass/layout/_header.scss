@@ -1,0 +1,166 @@
+.header {
+    height: 95vh;
+    background-image: linear-gradient(to top, rgba($black, 0.6), rgba($black, 0.6)), url(../../img/settings.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    color: $white;
+    position: relative;
+    
+        @media only screen and (max-height: $bp-tiny){
+            height: 100vh;              
+        }
+
+        &__wrapper{
+            max-width: $max-width;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            max-height: 1196px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+                @media only screen and (max-width: $bp-small){
+                    width: 90%;
+                }
+        }
+        &__content{
+            height: 70%;
+            display: grid;
+            justify-content: center;
+            justify-items: center;
+            justify-items: center;
+            align-items: center;
+            line-height: 2;
+            // padding: 7rem 17rem;
+            
+
+            // @media only screen and (max-height: $bp-tiny){
+            //     height: 100%;
+            //     padding: 5rem 15rem;
+            // }
+
+            // @media only screen and (max-width: $bp-large){    
+            //     padding: auto 15rem;
+            //     height: 80%;
+            // }
+    
+            // @media only screen and (max-width: $bp-medium){    
+            //     padding: 20rem 10rem;
+            //     height: 90%;        
+            // }
+    
+            // @media only screen and (max-width: $bp-small){    
+            //     padding: 32rem 7rem;
+            // }
+    
+            // @media only screen and (max-width: $bp-tiny){    
+            //     padding: 15rem 7rem;
+            //     height: 85%;
+            // }
+    
+            // @media only screen and (max-width: $bp-v-tiny){    
+            //     padding: 10rem 7rem;
+            //     height: 95%;
+            // }
+    
+        }
+
+        &__h1{
+            text-align: center;
+            align-self: end;
+            position: relative;
+            transform: scaleX(0);
+            animation: revealTextReverse 1s ease-in-out forwards;
+            display: block;
+            transform-origin: left;
+        }
+
+        &__paragraph{
+            align-self: start;
+            text-align: center;
+            font-size: 1.7rem;
+            letter-spacing: .7rem;
+            transform: scaleX(0);
+            animation: revealTextReverse 1s ease-in-out forwards;
+            display: block;
+            animation-delay: 1s;
+            transform-origin: left;
+
+            @media only screen and (max-width: $bp-small){    
+                line-height: 2;
+                font-size: 3rem;
+            }
+        }
+
+        &__span{
+            background-image: linear-gradient( to right top,
+                                             $color-secondary-dark, $color-secondary-light);
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+        }
+
+        &__buttons-container{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            justify-content: space-between;
+            justify-items: center;
+            align-content: center;
+            width: 60%;
+            animation: slide-up 1s linear forwards;
+            animation-delay: 3s;
+            opacity: 0;
+
+            @media only screen and (max-width: $bp-largest){    
+                width: 50%;
+            }
+
+            @media only screen and (max-width: $bp-large){    
+                width: 60%;
+            }
+
+            @media only screen and (max-width: $bp-small){    
+                width: 100%;
+            }
+        }
+
+        &__btn:link,
+        &:visited{
+            font-size: 1.7rem;
+            width: 16rem;
+            padding: 1rem 2rem;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+
+            @media only screen and (max-width: $bp-small){
+                font-size: 3rem;
+                width: 25rem;
+                padding: 2rem 1rem;
+            }
+        }
+
+        &__h1::before,
+        &__paragraph::before{
+            content: "";
+            left: 0;
+            top: 0;
+            position: absolute;
+            display: block;
+            height: 100%;
+            width: 100%;
+            background: $color-secondary;
+            transform-origin: right;
+            animation: revealText 1s ease-in-out forwards;
+            animation-delay: 1s;
+        }
+
+        &__paragraph::before{
+            animation-delay: 2s;
+        }
+}

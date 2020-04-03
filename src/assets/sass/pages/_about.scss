@@ -1,0 +1,174 @@
+.about{
+    display: grid;
+    grid-template-rows: [heroStart] 50vh [heroEnd] 2rem [story-start] 3fr [stotry-end card-start] 4fr [card-end] 10rem;
+    grid-template-columns:[full-start] minmax(1rem, 1fr) repeat(12, [col-start] 10rem [col-end]) minmax(1rem, 1fr) [full-end];
+
+        @media only screen and (max-width: $bp-largest){
+            grid-template-columns:[full-start] minmax(1rem, 1fr) repeat(9, [col-start] 10rem [col-end]) minmax(1rem, 1fr) [full-end];
+            grid-template-rows: [heroStart] 50vh [heroEnd] 2rem [story-start] 2fr [stotry-end card-start] 3fr [card-end] 10rem;
+        }
+
+        @media only screen and (max-width: $bp-large){
+            grid-template-rows: [heroStart] 50vh [heroEnd] 2rem [story-start] 3fr [stotry-end card-start] 4.5fr [card-end] 10rem;
+        }
+
+        @media only screen and (max-width: $bp-medium){
+            grid-template-columns:[full-start] minmax(1rem, 1fr) repeat(8, [col-start] 10rem [col-end]) minmax(1rem, 1fr) [full-end];
+        }
+
+        @media only screen and (max-width: 690px){
+            grid-template-rows: [heroStart] 40vh [heroEnd] 2rem [story-start] 1fr [stotry-end card-start] 3fr [card-end] 10rem;
+        }
+
+        @media only screen and (max-width: $bp-small){
+            grid-template-columns:[full-start] minmax(1rem, 1fr) repeat(7, [col-start] 10rem [col-end]) minmax(1rem, 1fr) [full-end];
+        }
+
+        @media only screen and (max-width: $bp-tiny){
+            grid-template-columns:[full-start] minmax(1rem, 1fr) repeat(6, [col-start] 9.5rem [col-end]) minmax(1rem, 1fr) [full-end];
+        }
+
+        @media only screen and (max-width: $bp-v-tiny){
+            grid-template-columns:[full-start] minmax(1rem, 1fr) repeat(6, [col-start] 8.5rem [col-end]) minmax(1rem, 1fr) [full-end];
+        }
+
+        &__hero{
+            background-image: linear-gradient(90deg, rgba($black, 0.4), rgba($black, 0.4)), url("../../img/about-hero.jpg");
+        }
+
+        &-card{
+            color: $color-primary-dark;
+            padding: 4rem 1rem;
+            display: grid;
+            justify-items: center;
+            align-content: start;
+            gap: 2rem;
+
+                &__paragraph{
+                    font-size: 1.65rem;
+                    text-align: center;
+                    line-height: 1.5;
+
+                    @media only screen and (max-width: $bp-small){
+                        font-size: 3rem;
+                    }
+                }
+
+                &__icon{
+                    height: 7rem;
+                    width: 7rem;
+                    fill: $color-primary;
+
+                    @media only screen and (max-width: $bp-small){
+                        height: 9rem;
+                        width: 9rem;
+                    }
+                }
+        }
+
+        &-cards{
+            &__heading{
+                text-align: center;
+                color: $color-primary;
+                    
+                    @media only screen and (max-width: $bp-largest){
+                        letter-spacing: .5rem;
+                    }
+
+                    @media only screen and (max-width: $bp-small){
+                       font-size: 4.5rem;
+                       letter-spacing: .2rem;
+                       margin-bottom: 2rem;
+                    }
+            }
+
+            &__container{
+                display: grid;
+                justify-content: space-between;
+                gap: 3rem;
+                grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+
+                    @media only screen and (max-width: $bp-largest){
+                        grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+                    }
+
+                    @media only screen and (max-width: 690px){
+                        padding: 0 4rem;
+                    }
+            } 
+        }
+
+        &__paragraph{
+            line-height: 2;
+
+            &-container{
+                display: grid;
+                gap: 3rem;
+                padding: 8rem 5rem;
+
+                @media only screen and (max-width: $bp-small){
+                    padding: 0 2rem;
+                }
+
+                    @media only screen and (max-width: $bp-small){
+                        text-indent: 5rem;
+                        line-height: 1.5;
+                        font-size: 3rem;
+                    }
+            }
+
+                @media only screen and (max-width: $bp-small){
+                    line-height: 1.5;
+                }
+        }
+}
+
+.section{
+    &-about-story{
+        grid-column: col-start 1 / col-end 12;
+        grid-row: story-start / story-end;
+
+            @media only screen and (max-width: $bp-largest){
+                grid-column: col-start 1 / col-end 9;
+            }
+
+            @media only screen and (max-width: $bp-medium){
+                grid-column: col-start 1 / col-end 8;
+            }
+
+            @media only screen and (max-width: $bp-small){
+                grid-column: col-start 1 / col-end 7;
+            }
+
+            @media only screen and (max-width: $bp-tiny){
+                grid-column: full-start 1 / full-end 6;
+            }
+    }
+    &-about-cards{
+        grid-column: col-start 1 / col-end 12;
+        grid-row: card-start / card-end;
+
+        padding: 7rem 3rem;
+        display: grid;
+        gap: 2rem;
+        background-color: $color-tertiary-light;
+        border-radius: 1rem;
+
+
+            @media only screen and (max-width: $bp-largest){
+                grid-column: col-start 1 / col-end 9;
+            }
+
+            @media only screen and (max-width: $bp-medium){
+                grid-column: col-start 1 / col-end 8;
+            }
+
+            @media only screen and (max-width: $bp-small){
+                grid-column: col-start 1 / col-end 7;
+            }
+
+            @media only screen and (max-width: $bp-tiny){
+                grid-column: full-start 1 / full-end 6;
+            }
+    }
+}
